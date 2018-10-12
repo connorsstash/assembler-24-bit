@@ -1,0 +1,217 @@
+                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+
+ 
+10.51.08 JOB06197 ---- THURSDAY,  11 OCT 2018 ----
+10.51.08 JOB06197  IRR010I  USERID KC03J02  IS ASSIGNED TO THIS JOB.
+10.51.08 JOB06197  ICH70001I KC03J02  LAST ACCESS AT 10:42:26 ON THURSDAY, OCTOBER 11, 2018
+10.51.08 JOB06197  $HASP373 KC03J02A STARTED - INIT 2    - CLASS A        - SYS S0W1
+10.51.08 JOB06197  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+10.51.08 JOB06197  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+10.51.08 JOB06197  -KC03J02A                      00     49 ******    .00     .0    137   0      0      0      0     0
+10.51.08 JOB06197  -KC03J02A ENDED.  NAME-CONNOR PEKOVIC       TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+10.51.08 JOB06197  $HASP395 KC03J02A ENDED
+
+------ JES2 JOB STATISTICS ------
+
+
+  11 OCT 2018 JOB EXECUTION DATE
+
+
+          121 CARDS READ
+
+
+          173 SYSOUT PRINT RECORDS
+
+
+            0 SYSOUT PUNCH RECORDS
+
+
+           18 SYSOUT SPOOL KBYTES
+
+
+         0.00 MINUTES EXECUTION TIME
+!! END OF JES SPOOL FILE !!
+       1 //KC03J02A JOB ,'CONNOR PEKOVIC',MSGCLASS=H                             JOB06197
+       2 //JSTEP01  EXEC PGM=ASSIST                                              00020006
+       3 //STEPLIB  DD DSN=KC00NIU.ASSIST.LOADLIB,DISP=SHR                       00030006
+       4 //SYSPRINT DD SYSOUT=*                                                  00040006
+       5 //SYSIN    DD *                                                         00050006
+         //*                                                                     00168017
+       6 //FT05F001   DD  *                                                      00169015
+         //*                                                                     00301017
+       7 //FT06F001 DD SYSOUT=*                                                  00310015
+!! END OF JES SPOOL FILE !!
+ICH70001I KC03J02  LAST ACCESS AT 10:42:26 ON THURSDAY, OCTOBER 11, 2018
+IEF236I ALLOC. FOR KC03J02A JSTEP01
+IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+IEF237I JES2 ALLOCATED TO SYSPRINT
+IEF237I JES2 ALLOCATED TO SYSIN
+IEF237I JES2 ALLOCATED TO FT05F001
+IEF237I JES2 ALLOCATED TO FT06F001
+IEF142I KC03J02A JSTEP01 - STEP WAS EXECUTED - COND CODE 0000
+IGD104I KC00NIU.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+IEF285I   KC03J02.KC03J02A.JOB06197.D0000103.?         SYSOUT        
+IEF285I   KC03J02.KC03J02A.JOB06197.D0000101.?         SYSIN         
+IEF285I   KC03J02.KC03J02A.JOB06197.D0000102.?         SYSIN         
+IEF285I   KC03J02.KC03J02A.JOB06197.D0000104.?         SYSOUT        
+IEF373I STEP/JSTEP01 /START 2018284.1051
+IEF032I STEP/JSTEP01 /STOP  2018284.1051 
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+        VIRT:   584K  SYS:   264K  EXT:        0K  SYS:    12204K
+        ATB- REAL:                    12K  SLOTS:                     0K
+             VIRT- ALLOC:       2M SHRD:       0M
+IEF375I  JOB/KC03J02A/START 2018284.1051
+IEF033I  JOB/KC03J02A/STOP  2018284.1051 
+        CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+!! END OF JES SPOOL FILE !!
+
+*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT            
+
+                                                                                                                                    
+
+                                                                                                               PAGE    1            
+
+  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                          
+                                      1 ***************************************************************         00060027            
+                                      2 * PROGRAMMER NAME: CONNOR PEKOVIC                             *         00061027            
+                                      3 *                                                             *         00062027            
+                                      4 *            DATE: OCTOBER 12TH, 2018                         *         00063027            
+                                      5 *                                                             *         00070027            
+                                      6 *    PROGRAM NAME: ASSIGN 5                                   *         00080027            
+                                      7 *                                                             *         00090027            
+                                      8 *        FUNCTION: LOOP THROUGH AN UNKNOWN NUMBER OF THREE    *         00091027            
+                                      9 *                  FEILD RECORDS. DISPLAY THE NUMBERS IN      *         00091127            
+                                     10 *                  COLUMN 1, 2, AND 3. DISPLAY RECORD TOTAL IN*         00091227            
+                                     11 *                  COLUMN 4, AND DISPLAY THE AVG IN THE LAST  *         00091327            
+                                     12 *                  LINE.                                      *         00091427            
+                                     13 *                                                             *         00092027            
+                                     14 *           INPUT: THREE COLUMS OF 4 DIGIT NUMBERS            *         00093027            
+                                     15 *                                                             *         00094027            
+                                     16 *          OUTPUT: THE NUMBERS, THEIR TOTALS, AND THE AVERAGE *         00095027            
+                                     17 *                                                             *         00100027            
+                                     18 *     ENTRY CONDS: I DONT KNOW WHAT THIS MEANS                *         00110027            
+                                     19 *                                                             *         00120027            
+                                     20 *  REGISTER USAGE: 2,3,6,7.                                   *         00130027            
+                                     21 *                                                             *         00131027            
+                                     22 *      EXIT CONDS: I DONT KNOW WHAT THIS MEANS                *         00132027            
+                                     23 *                                                             *         00133027            
+                                     24 *          NOTES:  SEE THE COMMENTS                           *         00134027            
+                                     25 *                                                             *         00135027            
+                                     26 ***************************************************************         00136027            
+000000                               27 ASSIGN5  CSECT                                                          00150015            
+000000                               28          USING ASSIGN5,15      BASE REGISTER 15                         00151021            
+                                     29 *                                                                       00151119            
+000000 1B22                          30          SR    2,2             0-ING OUT RECORD COUNTER REG             00151224            
+000002 1B77                          31          SR    7,7             0-ING OUT SUM OF ALL SUMS                00151424            
+                                     32 *                                                                       00152015            
+000004 E000 F064 0050 00064          33          XREAD BUFFER,80       READ THE NEXT RECORD                     00153025            
+                                     34 *                                                                       00153115            
+00000A 4740 F044            00044    35 LOOP     BC    B'0100',ENDLOOP LOOP. IF READ FAILS, END                 00153416            
+                                     36 *                                                                       00153516            
+00000E 4120 2001            00001    37          LA    2,1(,2)         COUNT++                                  00153823            
+                                     38 *                                                                       00153915            
+000012 5330 F064            00064    39          XDECI 3,BUFFER        READ FIRST NUMBER FROM RECORD            00154024            
+000016 5230 F0DC            000DC    40          XDECO 3,ONUM1         PLACE NUMBER INTO PRINT LINE             00154220            
+                                     41 *                                                                       00154418            
+00001A 5340 1001            00001    42          XDECI 4,1(,1)         READ SECOND NUMBER FROM RECORD           00154524            
+00001E 5240 F0F2            000F2    43          XDECO 4,ONUM2         PLACE NUMBER INTO PRINT LINE             00154724            
+                                     44 *                                                                       00154918            
+000022 5350 1001            00001    45          XDECI 5,1(,1)         READ THIRD NUMBER FROM RECORD            00155024            
+000026 5250 F108            00108    46          XDECO 5,ONUM3         PLACE NUMBER INTO PRINT LINE             00155224            
+                                     47 *                                                                       00155421            
+00002A 1A34                          48          AR    3,4             ADD FIRST AND SECOND NUMBER              00155524            
+00002C 1A35                          49          AR    3,5             ADD SUM AND THIRD NUMBER                 00155624            
+                                     50 *                                                                       00155724            
+00002E 5230 F11E            0011E    51          XDECO 3,ONUM4         PLACE SUM OF NUMBERS INTO PRINT LINE     00155824            
+                                     52 *                                                                       00155924            
+
+                                                                                                               PAGE    2            
+
+  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                          
+000032 E020 F0B4 0085 000B4          53          XPRNT DETAIL1,133     WRITE THE OUTPUT                         00156024            
+                                     54 *                                                                       00156124            
+000038 1A73                          55          AR    7,3             6 WILL HOLD THE SUM OF ALL-              00156224            
+                                     56 *                              RECORDS FOR WHEN I CALCULATE             00156324            
+                                     57 *                              THE AVERAGE                              00156424            
+                                     58 *                                                                       00156524            
+00003A E000 F064 0050 00064          59          XREAD BUFFER,80       READ NEXT                                00156624            
+                                     60 *                                                                       00156724            
+000040 47F0 F00A            0000A    61          BC    B'1111',LOOP    GO CHECK CONDITION OF NEXT               00156825            
+                                     62 *                                                                       00156924            
+000044 5C60 F060            00060    63 ENDLOOP  M     6,=F'1'         MULTIPLY BY 1 TO EXTEND SIGN BIT TO R6   00157024            
+                                     64 *                                                                       00157126            
+000048 1D62                          65          DR    6,2             DIVIDE TOTAL BY THE COUNT TO GET AVG     00157224            
+                                     66 *                                                                       00157326            
+00004A 5270 F176            00176    67          XDECO 7,OAVG                                                   00157426            
+00004E 5260 F18F            0018F    68          XDECO 6,QUOTIENT                                               00157529            
+                                     69 *                                                                       00157626            
+000052 E020 F152 0085 00152          70          XPRNT AVGLINE,133                                              00157726            
+                                     71 *                                                                       00158015            
+000058 07FE                          72          BCR   B'1111',14      END PROGRAM                              00159321            
+                                     73 *                                                                       00159421            
+                                     74          LTORG                                                          00159721            
+000060 00000001                      75                =F'1'                                                                        
+                                     76 *                                                                       00159822            
+000064                               77 BUFFER   DS    CL80            TO READ INTO THIS                        00160121            
+                                     78 *                                                                       00160321            
+0000B4 F0                            79 DETAIL1  DC    C'0'            ONE LINE OF OUTPUT, TOTALS 133           00161523            
+0000B5 4040404040404040              80          DC    39C' '                                                   00161622            
+0000DC                               81 ONUM1    DS    CL12                                                     00161722            
+0000E8 4040404040404040              82          DC    10C' '                                                   00161821            
+0000F2                               83 ONUM2    DS    CL12                                                     00161922            
+0000FE 4040404040404040              84          DC    10C' '                                                   00162021            
+000108                               85 ONUM3    DS    CL12                                                     00162122            
+000114 4040404040404040              86          DC    10C' '                                                   00162221            
+00011E                               87 ONUM4    DS    CL12                                                     00162322            
+00012A 4040404040404040              88          DC    40C' '                                                   00162422            
+                                     89 *                                                                       00162521            
+000152 F1                            90 AVGLINE  DC    C'1'            AVERAGE LINE, TOTALS 133                 00163026            
+000153 C1E5C5D9C1C7C540              91          DC    CL35'AVERAGE RECORD OF SUMS (QUOTIENT): '                00164028            
+000176                               92 OAVG     DS    CL12                                                     00165024            
+000182 404040                        93          DC    3C' '                                                    00165129            
+000185 D8E4D6E3C9C5D5E3              94          DC    CL10'QUOTIENT: '                                         00165229            
+00018F                               95 QUOTIENT DS    CL12                                                     00165329            
+00019B 4040404040404040              96          DC    60C' '                                                   00165429            
+                                     97 *                                                                       00165522            
+                                     98          END   ASSIGN5         PROGRAM ENDS                             00166016            
+
+***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                         
+
+*** DYNAMIC CORE AREA USED:  LOW:    4128 HIGH:     580 LEAVING:  488860 FREE BYTES. AVERAGE:       47 BYTES/STMT ***               
+
+*** ASSEMBLY TIME =    0.000 SECS,    99000 STATEMENTS/SEC ***                                                                      
+
+*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                          
+
+                                               4500                  -230                     9                  4279               
+
+                                                  0                     7                     2                     9               
+
+                                               8516                  2853                     0                 11369               
+
+                                                 20                     0                  3245                  3265               
+
+                                               5529                  6977                  1681                 14187               
+
+                                               1013                   250                    85                  1348               
+
+                                                  0                  3364                  5275                  8639               
+
+                                               -887                  1100                  2293                  2506               
+
+                                               1234                  8447                  4591                 14272               
+
+                                                -89                    -7                    23                   -73               
+
+                                               8513                  5409                  2538                 16460               
+
+                                                  1                     2                     3                     6               
+
+                                               9999                  9998                  9997                 29994               
+
+AVERAGE RECORD OF SUMS (QUOTIENT):         8173   QUOTIENT:           12                                                            
+
+*** EXECUTION TIME =    0.000 SECS.       205 INSTRUCTIONS EXECUTED -   205000 INSTRUCTIONS/SEC ***                                 
+
+*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                   
+!! END OF JES SPOOL FILE !!
